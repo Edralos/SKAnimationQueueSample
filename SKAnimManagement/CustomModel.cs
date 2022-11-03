@@ -52,7 +52,7 @@ namespace SKAnimManagement
         {
             if (IsHandleable)
             {
-                UI.Handle(Name, ref Pose, Bounds, DrawHandle);
+                UI.Handle(Name, ref Pose, Bounds * Scale, DrawHandle);
             }
             AnimationManager.UpdateAnimations();
             Model.Draw(Pose.ToMatrix(Scale));
